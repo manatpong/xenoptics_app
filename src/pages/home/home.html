@@ -1,0 +1,207 @@
+<ion-header class="head-bar">
+  <!-- <img ion-right src="assets/imgs/xenopticslogo.png" class="navbarLogo" /> -->
+  <div class="head-text">
+    <ion-title>
+      <h2>Add Sequence</h2>
+    </ion-title>
+  </div>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="page-container">
+    <div class="content-container">
+      <div class="select-container">
+        <div class="select-motor">
+          <ion-item class="selection">
+            <ion-label>Motor</ion-label>
+            <ion-select [(ngModel)]="motor" #C (ionChange)="onChange(C.value)" interface="popover">
+              <ion-option value="1">Rotate</ion-option>
+              <ion-option value="2">Arm Up/Down</ion-option>
+              <ion-option value="3">Extend Arm</ion-option>
+              <ion-option value="4">Roll Back</ion-option>
+              <ion-option value="5">Gripper</ion-option>
+            </ion-select>
+          </ion-item>
+        </div>
+        <div class="select-position">
+          <ion-item class="selection">
+            <ion-label>Position</ion-label>
+            <ion-select interface="popover">
+              <ion-option value="1">1</ion-option>
+              <ion-option value="2">2</ion-option>
+              <ion-option value="3">3</ion-option>
+              <ion-option value="4">4</ion-option>
+              <ion-option value="5">5</ion-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </div>
+
+    </div>
+    <div class="table-container">
+      <div class="in-table">
+        <div class="row head-table">
+          <div class="col-one">
+            IDX
+          </div>
+          <div class="col-two">
+            Position
+          </div>
+          <div class="col-three">
+            Speed
+          </div>
+          <div class="col-four">
+            Acc
+          </div>
+          <div class="col-five">
+            Description
+          </div>
+        </div>
+        <div *ngFor="let posit of position">
+          <div class="row body-table">
+            <div class="col-one">
+              {{ posit.position }}
+            </div>
+            <div class="col-two">
+              400
+            </div>
+            <div class="col-three">
+              400
+            </div>
+            <div class="col-four">
+              400
+            </div>
+            <div class="col-five">
+              High speed
+            </div>
+          </div>
+        </div>
+
+        <div class="row body-table">
+          <div class="col-one">
+            2
+          </div>
+          <div class="col-two">
+            713
+          </div>
+          <div class="col-three">
+            25
+          </div>
+          <div class="col-four">
+            200
+          </div>
+          <div class="col-five">
+            Pre-push
+          </div>
+        </div>
+        <div class="row body-table">
+          <div class="col-one">
+            3
+          </div>
+          <div class="col-two">
+            770
+          </div>
+          <div class="col-three">
+            25
+          </div>
+          <div class="col-four">
+            200
+          </div>
+          <div class="col-five">
+            Push
+          </div>
+        </div>
+        <div class="row body-table">
+          <div class="col-one">
+            4
+          </div>
+          <div class="col-two">
+            502
+          </div>
+          <div class="col-three">
+            505
+          </div>
+          <div class="col-four">
+            540
+          </div>
+          <div class="col-five">
+            test position
+          </div>
+        </div>
+        <div class="row body-table">
+          <div class="col-one">
+            5
+          </div>
+          <div class="col-two">
+            400
+          </div>
+          <div class="col-three">
+            400
+          </div>
+          <div class="col-four">
+            400
+          </div>
+          <div class="col-five">
+            High speed
+          </div>
+        </div>
+        <div class="row body-table">
+          <div class="col-one">
+            6
+          </div>
+          <div class="col-two">
+            713
+          </div>
+          <div class="col-three">
+            25
+          </div>
+          <div class="col-four">
+            200
+          </div>
+          <div class="col-five">
+            Pre-push
+          </div>
+        </div>
+        <div class="row body-table">
+          <div class="col-one">
+            7
+          </div>
+          <div class="col-two">
+            400
+          </div>
+          <div class="col-three">
+            400
+          </div>
+          <div class="col-four">
+            400
+          </div>
+          <div class="col-five">
+            High speed
+          </div>
+        </div>
+        <div class="row body-table">
+          <div class="col-one">
+            8
+          </div>
+          <div class="col-two">
+            713
+          </div>
+          <div class="col-three">
+            25
+          </div>
+          <div class="col-four">
+            200
+          </div>
+          <div class="col-five">
+            Pre-push
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <button ion-button full color="primary" (click)="addData()">+ New Position</button>
+      <button ion-button color="energy" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</ion-content>
